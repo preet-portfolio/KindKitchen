@@ -3,35 +3,58 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Welcome to RecipeRevamp")
-                    .font(.title)
-                    .padding()
+            VStack(spacing: 30) {
+                Spacer()
+                
+                Text("Welcome to KindKitchen")
+                    .font(.system(size: 28, weight: .bold))
+                    .foregroundColor(.primary)
+                    .padding(.horizontal)
+                    .multilineTextAlignment(.center)
+                
                 NavigationLink(destination: LoginView()) {
                     Text("Login")
-                        .padding()
-                        .background(Color.blue)
+                        .font(.system(size: 20, weight: .medium))
                         .foregroundColor(.white)
-                        .cornerRadius(8)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color("Green"))
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+                        .shadow(radius: 5)
                 }
-                .padding()
+                
                 NavigationLink(destination: RegisterView()) {
                     Text("Register")
-                        .padding()
-                        .background(Color.green)
+                        .font(.system(size: 20, weight: .medium))
                         .foregroundColor(.white)
-                        .cornerRadius(8)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color("BrightYellow"))
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+                        .shadow(radius: 5)
                 }
-                .padding()
+                
                 NavigationLink(destination: CameraView()) {
                     Text("Take Photo")
-                        .padding()
-                        .background(Color.orange)
+                        .font(.system(size: 20, weight: .medium))
                         .foregroundColor(.white)
-                        .cornerRadius(8)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color("BrightOrange"))
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+                        .shadow(radius: 5)
                 }
-                .padding()
+                
+                Spacer()
             }
+            .background(
+                LinearGradient(gradient: Gradient(colors: [Color("BrightBlue"), Color("BrightRed")]), startPoint: .top, endPoint: .bottom)
+                    .edgesIgnoringSafeArea(.all)
+            )
+            .navigationBarHidden(true)
         }
     }
 }

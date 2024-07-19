@@ -15,6 +15,9 @@
 		F53656152C4AE4A1008B87F0 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53656142C4AE4A1008B87F0 /* RegisterView.swift */; };
 		F53656172C4AE4BB008B87F0 /* HomeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53656162C4AE4BB008B87F0 /* HomeView1.swift */; };
 		F536561A2C4AE4E2008B87F0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53656192C4AE4E2008B87F0 /* CameraView.swift */; };
+		F536561C2C4AEA97008B87F0 /* PasswordRecoveryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F536561B2C4AEA97008B87F0 /* PasswordRecoveryScreen.swift */; };
+		F536561E2C4AEAAE008B87F0 /* UserDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F536561D2C4AEAAE008B87F0 /* UserDashboard.swift */; };
+		F53656212C4AF0D6008B87F0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F53656202C4AF0D6008B87F0 /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,8 @@
 		F53656142C4AE4A1008B87F0 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		F53656162C4AE4BB008B87F0 /* HomeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView1.swift; sourceTree = "<group>"; };
 		F53656192C4AE4E2008B87F0 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		F536561B2C4AEA97008B87F0 /* PasswordRecoveryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRecoveryScreen.swift; sourceTree = "<group>"; };
+		F536561D2C4AEAAE008B87F0 /* UserDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53656212C4AF0D6008B87F0 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +71,8 @@
 				F53656162C4AE4BB008B87F0 /* HomeView1.swift */,
 				F53656122C4AE457008B87F0 /* LoginView.swift */,
 				F53656142C4AE4A1008B87F0 /* RegisterView.swift */,
+				F536561B2C4AEA97008B87F0 /* PasswordRecoveryScreen.swift */,
+				F536561D2C4AEAAE008B87F0 /* UserDashboard.swift */,
 				F53656192C4AE4E2008B87F0 /* CameraView.swift */,
 				F53656012C4ACAD0008B87F0 /* Assets.xcassets */,
 				F53656032C4ACAD0008B87F0 /* KindKitchen.entitlements */,
@@ -97,6 +105,9 @@
 			dependencies = (
 			);
 			name = KindKitchen;
+			packageProductDependencies = (
+				F53656202C4AF0D6008B87F0 /* FirebaseAnalytics */,
+			);
 			productName = KindKitchen;
 			productReference = F53655FA2C4ACACF008B87F0 /* KindKitchen.app */;
 			productType = "com.apple.product-type.application";
@@ -125,6 +136,9 @@
 				Base,
 			);
 			mainGroup = F53655F12C4ACACF008B87F0;
+			packageReferences = (
+				F536561F2C4AF0D6008B87F0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F53655FB2C4ACACF008B87F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -154,7 +168,9 @@
 				F53656152C4AE4A1008B87F0 /* RegisterView.swift in Sources */,
 				F53656002C4ACACF008B87F0 /* ContentView.swift in Sources */,
 				F53656132C4AE457008B87F0 /* LoginView.swift in Sources */,
+				F536561C2C4AEA97008B87F0 /* PasswordRecoveryScreen.swift in Sources */,
 				F536561A2C4AE4E2008B87F0 /* CameraView.swift in Sources */,
+				F536561E2C4AEAAE008B87F0 /* UserDashboard.swift in Sources */,
 				F53655FE2C4ACACF008B87F0 /* KindKitchenApp.swift in Sources */,
 				F53656172C4AE4BB008B87F0 /* HomeView1.swift in Sources */,
 			);
@@ -397,6 +413,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F536561F2C4AF0D6008B87F0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.29.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F53656202C4AF0D6008B87F0 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F536561F2C4AF0D6008B87F0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F53655F22C4ACACF008B87F0 /* Project object */;
 }
