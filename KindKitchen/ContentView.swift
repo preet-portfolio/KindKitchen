@@ -1,55 +1,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var image: Image? = nil
-    @State private var inputImage: UIImage? = nil
-    @State private var showingImagePicker = false
-    @State private var recipeSuggestions: [String] = []
-
+    @State private var isActive = false
+    
     var body: some View {
         VStack {
-            Text("Kind Kitchen")
-                .font(.largeTitle)
-                .padding()
-
-            Button(action: {
-                self.showingImagePicker = true
-            }) {
-                Text("Take Photo")
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
-            }
-
-            image?
-                .resizable()
-                .scaledToFit()
-                .frame(width: 300, height: 300)
-                .padding()
-
-            if !recipeSuggestions.isEmpty {
-                Text("Recipe Suggestions:")
-                    .font(.headline)
-                    .padding()
-
-                ForEach(recipeSuggestions, id: \.self) { suggestion in
-                    Text(suggestion)
+            if isActive {
+                HomeView()
+            } else {
+                VStack {
+                    Image(systemName: "leaf.fill") // Replace with your app logo
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100, height: 100)
                         .padding()
+                    Text("RecipeRevamp")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding()
+                }
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        withAnimation {
+                            self.isActive = true
+                        }
+                    }
                 }
             }
         }
-        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
-            ImagePicker(image: self.$inputImage)
-        }
-    }
-
-    func loadImage() {
-        guard let inputImage = inputImage else { return }
-        image = Image(uiImage: inputImage)
-        // Here you can call your image recognition and recipe suggestion functions
-        // For now, let's add some mock data
-        recipeSuggestions = ["Pasta with Tomato Sauce", "Vegetable Stir Fry", "Chicken Salad"]
     }
 }
 

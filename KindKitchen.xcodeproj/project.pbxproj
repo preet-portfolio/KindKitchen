@@ -11,7 +11,10 @@
 		F53656002C4ACACF008B87F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53655FF2C4ACACF008B87F0 /* ContentView.swift */; };
 		F53656022C4ACAD0008B87F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53656012C4ACAD0008B87F0 /* Assets.xcassets */; };
 		F53656062C4ACAD0008B87F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53656052C4ACAD0008B87F0 /* Preview Assets.xcassets */; };
-		F536560D2C4AD057008B87F0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F536560C2C4AD057008B87F0 /* ImagePicker.swift */; };
+		F53656132C4AE457008B87F0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53656122C4AE457008B87F0 /* LoginView.swift */; };
+		F53656152C4AE4A1008B87F0 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53656142C4AE4A1008B87F0 /* RegisterView.swift */; };
+		F53656172C4AE4BB008B87F0 /* HomeView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53656162C4AE4BB008B87F0 /* HomeView1.swift */; };
+		F536561A2C4AE4E2008B87F0 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53656192C4AE4E2008B87F0 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +24,10 @@
 		F53656012C4ACAD0008B87F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F53656032C4ACAD0008B87F0 /* KindKitchen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KindKitchen.entitlements; sourceTree = "<group>"; };
 		F53656052C4ACAD0008B87F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F536560C2C4AD057008B87F0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		F53656122C4AE457008B87F0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F53656142C4AE4A1008B87F0 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		F53656162C4AE4BB008B87F0 /* HomeView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView1.swift; sourceTree = "<group>"; };
+		F53656192C4AE4E2008B87F0 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +62,10 @@
 			children = (
 				F53655FD2C4ACACF008B87F0 /* KindKitchenApp.swift */,
 				F53655FF2C4ACACF008B87F0 /* ContentView.swift */,
-				F536560C2C4AD057008B87F0 /* ImagePicker.swift */,
+				F53656162C4AE4BB008B87F0 /* HomeView1.swift */,
+				F53656122C4AE457008B87F0 /* LoginView.swift */,
+				F53656142C4AE4A1008B87F0 /* RegisterView.swift */,
+				F53656192C4AE4E2008B87F0 /* CameraView.swift */,
 				F53656012C4ACAD0008B87F0 /* Assets.xcassets */,
 				F53656032C4ACAD0008B87F0 /* KindKitchen.entitlements */,
 				F53656042C4ACAD0008B87F0 /* Preview Content */,
@@ -142,9 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F536560D2C4AD057008B87F0 /* ImagePicker.swift in Sources */,
+				F53656152C4AE4A1008B87F0 /* RegisterView.swift in Sources */,
 				F53656002C4ACACF008B87F0 /* ContentView.swift in Sources */,
+				F53656132C4AE457008B87F0 /* LoginView.swift in Sources */,
+				F536561A2C4AE4E2008B87F0 /* CameraView.swift in Sources */,
 				F53655FE2C4ACACF008B87F0 /* KindKitchenApp.swift in Sources */,
+				F53656172C4AE4BB008B87F0 /* HomeView1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
